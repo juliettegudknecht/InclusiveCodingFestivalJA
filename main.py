@@ -4,21 +4,9 @@
 
 # import dependencies 
 import pandas as pd 
-import requests 
-import json
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
-import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
-import xgboost as xgb
-from sklearn import preprocessing
-from sklearn.metrics import precision_score, recall_score
-import numpy as np
-from tqdm.notebook import tqdm
 import sys
 from location_grabber import grab_location
 from model import prepare_data, model, metrics
-
-
 
 
 # read data 
@@ -41,10 +29,6 @@ def main():
     data = read_data(sys.argv[1])
     unique_df = grab_unique_dst_ip(data)
     results = grab_location(unique_df)
-    # turn list into dataframe
-    results_df = pd.DataFrame(results)
-    # save to a csv
-    results_df.to_csv("results.csv")
     # turn list into dataframe
     results_df = pd.DataFrame(results)
     # save to a csv

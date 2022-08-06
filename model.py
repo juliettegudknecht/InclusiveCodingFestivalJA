@@ -14,7 +14,7 @@ def prepare_data(df):
     # establish x values (everything except Label)
     X = df.loc[:, df.columns != 'Label']
     # make label numerical and int
-    df["Label"] = df["Label"].replace(['benign','ddos'],[0,1])
+    df["Label"] = df["Label"].replace(['Benign','ddos'],[0,1])
 
     y = df["Label"]
     
@@ -40,7 +40,6 @@ def model(D_train):
     
     # create and fit model
     model_1 = xgb.train(param, D_train, steps)
-    
     
     # plot importance of predictors
     xgb.plot_importance(model_1)
