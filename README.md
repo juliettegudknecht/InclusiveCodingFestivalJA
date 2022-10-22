@@ -28,6 +28,8 @@ CSE-CIC-IDS2018-AWS: https://www.unb.ca/cic/datasets/ids-2017.html
 CICIDS2017: https://www.unb.ca/cic/datasets/ids-2018.html
 CIC DoS dataset(2016) : https://www.unb.ca/cic/datasets/dos-dataset.html
 
+The geolocation map is available here: https://datastudio.google.com/reporting/417d1344-3ea6-4d27-8ddd-da1923b2ae3d
+
 Sources:
 https://www.microsoft.com/en-us/security/business/security-101/what-is-a-ddos-attack
 https://www.nvidia.com/en-us/glossary/data-science/xgboost/
