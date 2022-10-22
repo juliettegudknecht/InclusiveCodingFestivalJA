@@ -57,7 +57,7 @@ def metrics(D_test, y_test, model_1):
     print("Accuracy = {}".format(accuracy_score(y_test, best_preds)))
 
 def cross_val(D_train):
-    params = {"objective":"reg:squarederror",'colsample_bytree': 0.3,'learning_rate': 0.1,
+    params = {"objective":"multi:softprob",'colsample_bytree': 0.3,'learning_rate': 0.1,
                 'max_depth': 5, 'alpha': 10}
 
     cv_results = xgb.cv(dtrain=D_train, params=params, nfold=5, num_boost_round=50,early_stopping_rounds=10,metrics="rmse", as_pandas=True, seed=123)
